@@ -15,7 +15,8 @@ public class VoxelizationManager : MonoBehaviour
             // 如果实例为null，尝试在场景中找到它
             if (_instance == null)
             {
-                _instance = FindObjectOfType<VoxelizationManager>();
+                //_instance = FindObjectOfType<VoxelizationManager>();  // Unity6 标记为过时方法
+                _instance = FindFirstObjectByType<VoxelizationManager>();
 
                 // 如果场景中没有，在编辑器模式下创建一个新的实例
 #if UNITY_EDITOR
